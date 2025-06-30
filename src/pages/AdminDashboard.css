@@ -115,6 +115,6 @@ th, td {
   }
 
   .sidebar {
-    display: block;
+    display: none;
   }
 }

@@ -32,14 +32,12 @@ const categories = [
 function Home() {
   return (
     <div className="home-container">
-      {/* Banner Section */}
       <div className="banner">
         <h1>🔥 Big Sale Today!</h1>
         <p className='jk'>Get up to 50% off on select items</p>
         <Link to="/products" className="shop-now-btn">Shop Now</Link>
       </div>
 
-      {/* Category Navigation */}
       <section className="categories">
         <h2>Browse by Category</h2>
         <div className="category-grid">
@@ -52,7 +50,6 @@ function Home() {
       </section>
           
 
-      {/* Featured Products */}
       <section className="featured">
         
         <h2>Featured Products</h2>

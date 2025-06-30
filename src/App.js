@@ -8,7 +8,6 @@ import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
-
 import { CartProvider } from './context/CartContext';
 import { ToastContainer } from 'react-toastify';
 

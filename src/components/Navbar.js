@@ -1,4 +1,4 @@
-// src/components/Navbar.js
+
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
@@ -25,8 +25,6 @@ function Navbar() {
       <div className="navbar-logo">
         <Link to="/">🛍️ ShopEase</Link>
       </div>
-
-      {/* ✅ Search bar with form */}
       <form className="navbar-search" onSubmit={handleSearch}>
         <input
           type="text"

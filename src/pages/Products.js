@@ -35,24 +35,24 @@ function Products() {
     const queryParams = new URLSearchParams(location.search);
     const searchTerm = queryParams.get('search')?.toLowerCase() || '';
 
-    // Filtered products
+    
     let filtered = selectedCategory === 'All'
         ? allProducts
         : allProducts.filter(p => p.category === selectedCategory);
 
-    // Apply Price Filter
+
     if (priceFilter !== 'All') {
         if (priceFilter === 'Under50') filtered = filtered.filter(p => p.price < 50);
         if (priceFilter === '50to100') filtered = filtered.filter(p => p.price >= 50 && p.price <= 100);
         if (priceFilter === 'Above100') filtered = filtered.filter(p => p.price > 100);
     }
 
-    // Apply Rating Filter
+    
     if (ratingFilter !== 'All') {
         filtered = filtered.filter(p => p.rating >= parseInt(ratingFilter));
     }
 
-    // ✅ Search filter
+   
     if (searchTerm) {
         filtered = filtered.filter(product =>
             product.name.toLowerCase().includes(searchTerm)
@@ -60,13 +60,13 @@ function Products() {
     }
 
 
-    // Apply Sorting
+   
     if (sortBy === 'LowToHigh') filtered = filtered.sort((a, b) => a.price - b.price);
     if (sortBy === 'HighToLow') filtered = filtered.sort((a, b) => b.price - a.price);
     if (sortBy === 'Newest') filtered = filtered.sort((a, b) => b.id - a.id); // Assuming higher ID = newer
 
 
-    // Load more products with infinite scroll
+    
     useEffect(() => {
         const target = loadMoreRef.current;
         const observer = new IntersectionObserver(entries => {
@@ -83,7 +83,7 @@ function Products() {
     }, [filtered, loadedCount]);
 
     useEffect(() => {
-        setLoadedCount(4); // reset count when category changes
+        setLoadedCount(4); 
     }, [selectedCategory]);
 
     const handleAdd = (product) => {
@@ -95,7 +95,7 @@ function Products() {
         <div className="products-page">
             <h2>All Products</h2>
 
-            {/* Category Filter */}
+            
             <div className="category-filter">
                 {categories.map(cat => (
                     <button
@@ -107,7 +107,7 @@ function Products() {
                     </button>
                 ))}
             </div>
-            {/* Price Filter */}
+            
             <div className="filter-row">
                 <label>Price:</label>
                 <select value={priceFilter} onChange={(e) => setPriceFilter(e.target.value)}>
@@ -117,7 +117,7 @@ function Products() {
                     <option value="Above100">Above $100</option>
                 </select>
 
-                {/* Rating Filter */}
+                
                 <label>Rating:</label>
                 <select value={ratingFilter} onChange={(e) => setRatingFilter(e.target.value)}>
                     <option value="All">All</option>
@@ -126,7 +126,7 @@ function Products() {
                     <option value="5">5★ only</option>
                 </select>
 
-                {/* Sort By */}
+                
                 <label>Sort by:</label>
                 <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
                     <option value="">None</option>
@@ -136,7 +136,7 @@ function Products() {
                 </select>
             </div>
 
-            {/* Product Grid */}
+            
             <div className="product-grid">
                 {filtered.slice(0, loadedCount).map(product => (
                     <div className="product-card" key={product.id}>
@@ -153,7 +153,7 @@ function Products() {
                 ))}
             </div>
 
-            {/* Infinite scroll trigger */}
+            
             <div ref={loadMoreRef} style={{ height: '50px' }}></div>
         </div>
     );

@@ -16,7 +16,7 @@ function Cart() {
             toast.warn("Your cart is empty!");
         } else {
             toast.success("Order placed successfully! ✅");
-            localStorage.removeItem('cart'); // Clear from localStorage
+            localStorage.removeItem('cart'); 
             setCart([]);
         }
     };

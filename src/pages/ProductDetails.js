@@ -1,4 +1,4 @@
-// src/pages/ProductDetails.js
+
 
 import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { CartContext } from '../context/CartContext';
 import { toast } from 'react-toastify';
 import './ProductDetails.css';
 
-// Sample product data (You can replace this with dynamic data later)
+
 const allProducts = [
   { id: 1, name: 'Wireless Headphones', price: 99.99, image:'headpone.webp', rating: 4, category: 'Electronics', description: 'High-quality wireless headphones with noise cancellation.' },
   { id: 2, name: 'Smart Watch', price: 149.99, image: 'watch.webp', rating: 5, category: 'Electronics', description: 'Track your health, fitness, and notifications.' },
