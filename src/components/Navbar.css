@@ -1,0 +1,149 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e1e2f;
+  padding: 1rem 2rem;
+  color: white;
+  flex-wrap: wrap;
+  height:40px;
+
+}
+
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+
+.navbar-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.navbar-search input {
+  flex-grow: 1;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  border: none;
+  min-width: 100px;
+}
+
+.search-btn {
+  padding: 0.4rem 0.8rem;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin-left: 1rem;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  font-size: 17px;
+}
+
+.navbar-links a:hover {
+  color: #ffcc00;
+  background-color: #575757;
+  border:2px solid rgb(248, 243, 243);
+  border-radius: 8px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-search {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .navbar-search input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .search-btn {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #ffcc00;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-links.open {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+  }
+
+  .navbar-links a {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+    align-self: flex-end;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

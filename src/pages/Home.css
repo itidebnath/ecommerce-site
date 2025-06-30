@@ -1,0 +1,139 @@
+
+
+.home-container {
+  padding: 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: aliceblue;
+}
+
+.banner {
+  background-image: url('/public/hero_image.jpg');
+  background-size: cover;
+  height:199px;
+  color: rgb(19, 18, 18);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-shadow: 2px 4px 4px rgb(255, 217, 0);
+}
+
+.jk{
+    color:#000000;
+    text-shadow: 2px 0   #fcf5f5;
+    font-weight: 700;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.shop-now-btn {
+  background: #fff;
+  color: #ff8c00;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.shop-now-btn:hover {
+  background: #1e1e2f;
+  color: #fff;
+}
+
+.categories {
+  margin-bottom: 3rem;
+}
+
+.categories h2 {
+  margin-bottom: 1rem;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.category-card {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 1rem;
+  background:  #ffcc00;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #000000;
+  transition: all 0.3s;
+  box-shadow:   2px 2px  #131312;
+}
+
+.category-card:hover {
+  background: #ffa600;
+  transform: scale(1.05);
+}
+
+.featured h2 {
+  margin-bottom: 1rem;
+}
+
+.product-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #ffffff;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  min-width: 220px;
+  box-shadow:  2px 4px 16px  #030303;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-20px);
+}
+
+.product-card img {
+  width: 150px;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: #1e1e2f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .product-grid,
+  .category-grid {
+    flex-direction: column;
+  }
+}

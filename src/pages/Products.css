@@ -1,0 +1,75 @@
+/* src/pages/Products.css */
+
+.products-page {
+  padding: 1rem;
+  background-color: aliceblue;
+}
+
+.category-filter {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top:1rem;
+}
+
+.category-filter button {
+  padding: 6px 12px;
+  background: #f5dc00;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category-filter button.active {
+  background: #222222;
+  color: white;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  text-align: center;
+  background: white;
+  transition: 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  align-items: center;
+}
+.filter-row label {
+  font-weight: bold;
+}
+.filter-row select {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+.view-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #0056b3;
+}
