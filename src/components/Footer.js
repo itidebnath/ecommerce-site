@@ -21,7 +21,7 @@ function Footer() {
         </div>
         <div className="footer-section">
           <h4>Contact</h4>
-          <p>Email: support@shopsmart.com</p>
+          <p>Email: support@shopEase.com</p>
           <p>Phone: +1-800-123-4567</p>
         </div>
       </div>
